@@ -16,7 +16,7 @@ function DeckInput() {
                         w-full 
                         rounded-xl 
                         text-base 
-                        bg-gray-00 
+                        bg-gray-200 
                         border-2
                         text-gray-900
                         placeholder-gray-500

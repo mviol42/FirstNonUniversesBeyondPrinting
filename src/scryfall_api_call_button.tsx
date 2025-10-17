@@ -129,7 +129,7 @@ function ScryfallApiCallButton({decklist = '', setDeckList, setErrors }: any) {
                 font-bold 
                 shadow-lg 
                 ${(isLoading || decklist.trim().length === 0)
-                    ? 'bg-gray-400 text-gray-300 cursor-not-allowed' 
+                    ? 'bg-gray-500 text-gray-300 cursor-not-allowed' 
                     : 'bg-black text-white hover:bg-blue-700 focus:ring-4 focus:ring-blue-300'
                 }
             `}
