@@ -13,7 +13,7 @@ function timeout(delay: number) {
     return new Promise( res => setTimeout(res, delay) );
 }
 
-function ScryfallApiCallButton({decklist = '', setDeckList, setErrors }) {
+function ScryfallApiCallButton({decklist = '', setDeckList, setErrors }: any) {
     const [isLoading, setIsLoading] = useState(false)
     
     const getSpecificPrintingsForCards = async () => {
@@ -24,7 +24,7 @@ function ScryfallApiCallButton({decklist = '', setDeckList, setErrors }) {
         let errors: string[] = [];
 
         // We can safely call .split and .filter because decklist defaults to ''
-        const lines = decklist.split('\n').filter(line => line.trim() !== '');
+        const lines: string[] = decklist.split('\n').filter((line: string) => line.trim() !== '');
         if (lines.length === 0) {
             errors.push("Please paste a decklist before submitting.");
             setIsLoading(false);
