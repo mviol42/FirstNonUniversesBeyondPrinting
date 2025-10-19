@@ -82,7 +82,7 @@ function ScryfallApiCallButton({decklist = '', setDeckList, setErrors }: any) {
 
     const queryScryfallToFindBestPrinting = async (cardName: string, errors: string[]) => {
         // We search for the exact card name first without secret lair drops and universes beyond, then with SLD and UB
-        const firstPassEncodedQuery = encodeURIComponent(`!"${cardName}" -is:promo -set:plst -set_type:memorabilia -set_type:alchemy -set:sld -is:universes_beyond in:paper game:paper sort:usd direction:asc`); 
+        const firstPassEncodedQuery = encodeURIComponent(`!"${cardName}" -is:promo -set:plst -set_type:memorabilia is:default -set_type:alchemy -set:sld -is:universes_beyond in:paper game:paper sort:usd direction:asc`); 
         const secondPassEncodedQuery = encodeURIComponent(`!"${cardName}" -is:promo -set:plst -set_type:memorabilia -set_type:alchemy in:paper game:paper sort:usd direction:asc`); 
         const apiUrlPrefix = `https://api.scryfall.com/cards/search?q=`;
         const firstPassApiUrl = `${apiUrlPrefix}${firstPassEncodedQuery}`;
